@@ -8,7 +8,7 @@ function App() {
   const [jokes, setJokes] = useState([])
 
   useEffect(() => {
-    axios.get('/jokes')
+    axios.get('/api/jokes')
       .then(response => {
         setJokes(response.data)
       })
@@ -19,7 +19,7 @@ function App() {
 
   return (
     <>
-      <h1>Prajwal Kumbar</h1>
+      <h1>Jokes by `Prajwal Kumbar` :/</h1>
       <p> JOKES: {jokes.length}</p>
 
       {
